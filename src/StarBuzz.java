@@ -8,6 +8,10 @@ public class StarBuzz {
 		Beverage houseBlend = new HouseBlend();
 		System.out.println("A " + houseBlend.getDescription() + " costs $" + houseBlend.cost());
 
+		// Add some mocha to the espresso and print it's cost
+		Beverage espressoWithMocha = new Mocha(espresso);
+		System.out.println("A " + espressoWithMocha.getDescription() + " costs $" + espressoWithMocha.cost());
+
 		return;
 	}
 }
