@@ -1,25 +1,18 @@
 public class StarBuzz {
 	public static void main(String[] args) {
-		// Create an espresso object and print it's cost
-		Beverage espresso = new Espresso();
-		System.out.println("An " + espresso.getDescription() + " costs $" + espresso.cost());
+		Beverage beverage = new Espresso();
+		System.out.println(beverage.getDescription() + " $" + beverage.cost());
 
-		// Create a house blend object and print it's cost
-		Beverage houseBlend = new HouseBlend();
-		System.out.println("A " + houseBlend.getDescription() + " costs $" + houseBlend.cost());
+		Beverage beverage2 = new DarkRoast();
+		beverage2 = new Mocha(beverage2);
+		beverage2 = new Mocha(beverage2);
+		beverage2 = new Whip(beverage2);
+		System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
 
-		// Add some mocha to the espresso and print it's cost
-		Beverage espressoWithMocha = new Mocha(espresso);
-		System.out.println("A " + espressoWithMocha.getDescription() + " costs $" + espressoWithMocha.cost());
-
-		// Add some soy to the espresso and print it's cost
-		Beverage espressoWithSoy = new Soy(espresso);
-		System.out.println("A " + espressoWithSoy.getDescription() + " costs $" + espressoWithSoy.cost());
-
-		// Add some whip to the espresso and print it's cost
-		Beverage espressoWithWhip = new Whip(espresso);
-		System.out.println("A " + espressoWithWhip.getDescription() + " costs $" + espressoWithWhip.cost());
-
-		return;
+		Beverage beverage3 = new HouseBlend();
+		beverage3 = new Soy(beverage3);
+		beverage3 = new Mocha(beverage3);
+		beverage3 = new Whip(beverage3);
+		System.out.println(beverage3.getDescription() + " $" + beverage3.cost());
 	}
 }
