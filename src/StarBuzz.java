@@ -12,6 +12,10 @@ public class StarBuzz {
 		Beverage espressoWithMocha = new Mocha(espresso);
 		System.out.println("A " + espressoWithMocha.getDescription() + " costs $" + espressoWithMocha.cost());
 
+		// Add some soy to the espresso and print it's cost
+		Beverage espressoWithSoy = new Soy(espresso);
+		System.out.println("A " + espressoWithSoy.getDescription() + " costs $" + espressoWithSoy.cost());
+
 		return;
 	}
 }
